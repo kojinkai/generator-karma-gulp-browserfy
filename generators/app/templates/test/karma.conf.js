@@ -1,8 +1,7 @@
 const istanbul = require('browserify-istanbul');
-const isparta  = require('isparta');
+const isparta = require('isparta');
 
 module.exports = config => {
-
   config.set({
 
     basePath: '../',
@@ -42,5 +41,4 @@ module.exports = config => {
     ]
 
   });
-
 };

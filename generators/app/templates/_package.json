@@ -17,6 +17,7 @@
     "browser-sync": "^2.16.0",
     "browserify": "^13.1.0",
     "browserify-istanbul": "^2.0.0",
+    "eslint-config-xo-space": "^0.15.0",    
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
     "gulp-notify": "^2.2.0",
@@ -34,5 +35,11 @@
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "3.7.0"
-  }
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "mocha": true
+    }
+  } 
 }

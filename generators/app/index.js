@@ -10,7 +10,8 @@ module.exports = generators.Base.extend({
       'Welcome to the classy ' + chalk.red('generator-karma-gulp-browserify') + ' generator!'
     ));
 
-    var prompts = [{
+    var prompts = [
+      {
         type: 'input',
         name: 'name',
         message: 'Enter project name',
@@ -31,8 +32,7 @@ module.exports = generators.Base.extend({
   },
 
   writing: {
-
-    packageJSON: function() {
+    packageJSON: function () {
       this.fs.copyTpl(
         this.templatePath('_package.json'),
         this.destinationPath('package.json'), {
@@ -46,10 +46,10 @@ module.exports = generators.Base.extend({
       this.fs.copy(
         this.templatePath('app'),
         this.destinationPath('app')
-      ); 
+      );
     },
 
-    gulpfile: function() {
+    gulpfile: function () {
       this.fs.copy(
         this.templatePath('gulpfile.js'),
         this.destinationPath('gulpfile.js')
@@ -60,14 +60,14 @@ module.exports = generators.Base.extend({
       this.fs.copy(
         this.templatePath('gulp'),
         this.destinationPath('gulp')
-      ); 
+      );
     },
 
     test: function () {
       this.fs.copy(
         this.templatePath('test'),
         this.destinationPath('test')
-      ); 
+      );
     },
 
     eslint: function () {
@@ -82,7 +82,7 @@ module.exports = generators.Base.extend({
         this.templatePath('babelrc'),
         this.destinationPath('.babelrc')
       );
-    }     
+    }
   },
 
   install: function () {

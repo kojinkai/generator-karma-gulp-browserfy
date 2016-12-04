@@ -43,7 +43,8 @@
   "eslintConfig": {
     "extends": "xo-space",
     "env": {
-      "mocha": true
+      "mocha": true,
+      "jasmine": true
     }
   },
   "repository": "kojinkai/generator-karma-gulp-browserify-update",

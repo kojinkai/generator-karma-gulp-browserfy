@@ -8,6 +8,7 @@ module.exports = {
   buildDir: './build/',
 
   scripts: {
+    entry: 'app/adder.js',
     src: 'app/js/**/*.js',
     dest: 'build/js',
     test: 'test/**/*.js',
