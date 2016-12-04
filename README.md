@@ -31,10 +31,10 @@ Apache-2.0 © [Lewis Nixon](http://boxdelue.io)
 
 
 [npm-image]: https://badge.fury.io/js/generator-karma-gulp-browserify-update.svg
-[npm-url]: https://npmjs.org/package/generator-karma-gulp-browserify-update
+[npm-url]: https://npmjs.org/package/generator-karma-gulp-browserify
 [travis-image]: https://travis-ci.org/kojinkai/generator-karma-gulp-browserify-update.svg?branch=master
-[travis-url]: https://travis-ci.org/kojinkai/generator-karma-gulp-browserify-update
+[travis-url]: https://travis-ci.org/kojinkai/generator-karma-gulp-browserify
 [daviddm-image]: https://david-dm.org/kojinkai/generator-karma-gulp-browserify-update.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/kojinkai/generator-karma-gulp-browserify-update
-[coveralls-image]: https://coveralls.io/repos/kojinkai/generator-karma-gulp-browserify-update/badge.svg
-[coveralls-url]: https://coveralls.io/r/kojinkai/generator-karma-gulp-browserify-update
+[daviddm-url]: https://david-dm.org/kojinkai/generator-karma-gulp-browserify
+[coveralls-image]: https://coveralls.io/repos/kojinkai/generator-karma-gulp-browserify/badge.svg
+[coveralls-url]: https://coveralls.io/r/kojinkai/generator-karma-gulp-browserify
