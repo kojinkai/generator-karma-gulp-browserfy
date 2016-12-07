@@ -6,7 +6,7 @@
   "author": {
     "name": "Lewis Nixon",
     "email": "lewcfn@gmail.com",
-    "url": "http://boxdelue.io"
+    "url": "http://boxdeluxe.io"
   },
   "files": [
     "generators"
@@ -21,7 +21,7 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "yeoman-generator": "^0.23.0",
+    "yeoman-generator": "^0.24.1",
     "chalk": "^1.0.0",
     "yosay": "^1.0.0"
   },
@@ -43,6 +43,7 @@
   "eslintConfig": {
     "extends": "xo-space/esnext",
     "env": {
+      "es6": true,
       "mocha": true,
       "jasmine": true
     }
