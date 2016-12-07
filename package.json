@@ -40,14 +40,6 @@
     "yeoman-assert": "^2.0.0",
     "yeoman-test": "^1.0.0"
   },
-  "eslintConfig": {
-    "extends": "xo-space/esnext",
-    "env": {
-      "es6": true,
-      "mocha": true,
-      "jasmine": true
-    }
-  },
   "repository": "kojinkai/generator-karma-gulp-browserify-update",
   "scripts": {
     "prepublish": "gulp prepublish",
