@@ -5,12 +5,12 @@ const prettyHrtime = require('pretty-hrtime');
 let startTime;
 
 module.exports = {
-  start: function () {
+  start() {
     startTime = process.hrtime();
     gutil.log('Running', gutil.colors.green('bundle') + '...');
   },
 
-  end: function () {
+  end() {
     const taskTime = process.hrtime(startTime);
     const prettyTime = prettyHrtime(taskTime);
     gutil.log('Finished', gutil.colors.green('bundle'), 'in', gutil.colors.magenta(prettyTime));

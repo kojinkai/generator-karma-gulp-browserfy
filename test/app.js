@@ -1,23 +1,23 @@
 'use strict';
-var path = require('path');
-var assert = require('yeoman-assert');
-var helpers = require('yeoman-test');
+const path = require('path');
+const assert = require('yeoman-assert');
+const helpers = require('yeoman-test');
 
-describe('generator-karma-gulp-browserify-update:app', function () {
-  before(function () {
+describe('generator-karma-gulp-browserify-update:app', () => {
+  before(() => {
     return helpers.run(path.join(__dirname, '../generators/app'))
       .withPrompts({someAnswer: true})
       .toPromise();
   });
 
-  it('creates the app files', function () {
+  it('creates the app files', () => {
     assert.file([
       'app/adder.js',
       'app/adder.spec.js'
     ]);
   });
 
-  it('creates the gulp files', function () {
+  it('creates the gulp files', () => {
     assert.file([
       'gulpfile.js',
       'gulp/config.js',
@@ -33,19 +33,19 @@ describe('generator-karma-gulp-browserify-update:app', function () {
     ]);
   });
 
-  it('creates the test config', function () {
+  it('creates the test config', () => {
     assert.file([
       'test/karma.conf.js'
     ]);
   });
 
-  it('creates the package.json', function () {
+  it('creates the package.json', () => {
     assert.file([
       'package.json'
     ]);
   });
 
-  it('creates the .babelrc', function () {
+  it('creates the .babelrc', () => {
     assert.file([
       '.babelrc'
     ]);

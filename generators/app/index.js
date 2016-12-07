@@ -1,16 +1,17 @@
 'use strict';
-var generators = require('yeoman-generator');
-var chalk = require('chalk');
-var yosay = require('yosay');
+const generators = require('yeoman-generator');
+const chalk = require('chalk');
+const yosay = require('yosay');
 
 module.exports = generators.Base.extend({
-  prompting: function () {
+
+  prompting() {
     // Have generators greet the user.
     this.log(yosay(
       'Welcome to the classy ' + chalk.red('generator-karma-gulp-browserify') + ' generator!'
     ));
 
-    var prompts = [
+    const prompts = [
       {
         type: 'input',
         name: 'name',
@@ -25,14 +26,15 @@ module.exports = generators.Base.extend({
       }
     ];
 
-    return this.prompt(prompts).then(function (props) {
+    return this.prompt(prompts).then(props => {
       // To access props later use this.props.someAnswer;
       this.props = props;
-    }.bind(this));
+    });
   },
 
   writing: {
-    packageJSON: function () {
+
+    packageJSON() {
       this.fs.copyTpl(
         this.templatePath('_package.json'),
         this.destinationPath('package.json'), {
@@ -42,42 +44,42 @@ module.exports = generators.Base.extend({
       );
     },
 
-    app: function () {
+    app() {
       this.fs.copy(
         this.templatePath('app'),
         this.destinationPath('app')
       );
     },
 
-    gulpfile: function () {
+    gulpfile() {
       this.fs.copy(
         this.templatePath('gulpfile.js'),
         this.destinationPath('gulpfile.js')
       );
     },
 
-    tasks: function () {
+    tasks() {
       this.fs.copy(
         this.templatePath('gulp'),
         this.destinationPath('gulp')
       );
     },
 
-    test: function () {
+    test() {
       this.fs.copy(
         this.templatePath('test'),
         this.destinationPath('test')
       );
     },
 
-    eslint: function () {
+    eslint() {
       this.fs.copy(
         this.templatePath('eslintrc'),
         this.destinationPath('.eslintrc')
       );
     },
 
-    babel: function () {
+    babel() {
       this.fs.copy(
         this.templatePath('babelrc'),
         this.destinationPath('.babelrc')
@@ -85,7 +87,7 @@ module.exports = generators.Base.extend({
     }
   },
 
-  install: function () {
+  install() {
     this.npmInstall();
   }
 });
