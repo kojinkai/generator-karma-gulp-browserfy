@@ -8,8 +8,8 @@ module.exports = {
   buildDir: './build/',
 
   scripts: {
-    entry: 'app/adder.js',
-    src: 'app/js/**/*.js',
+    entry: 'adder.js',
+    src: 'app/**/*.js',
     dest: 'build/js',
     test: 'test/**/*.js',
     gulp: 'gulp/**/*.js'
@@ -22,6 +22,10 @@ module.exports = {
 
   test: {
     karma: 'test/karma.conf.js'
+  },
+
+  eslint: {
+    src: ['gulp/**/*.js', 'test/karma.conf.js', 'app/**/*.js']
   }
 
 };

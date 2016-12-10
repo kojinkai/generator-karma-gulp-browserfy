@@ -31,15 +31,14 @@
     "karma-phantomjs-launcher": "^1.0.2",
     "phantomjs-prebuilt": "^2.1.12",
     "pretty-hrtime": "^1.0.2",
-    "run-sequence": "^1.2.2",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "3.7.0"
   },
   "eslintConfig": {
-    "extends": "xo-space",
+    "extends": "xo-space/esnext",
     "env": {
-      "mocha": true
+      "jasmine": true
     }
   } 
 }

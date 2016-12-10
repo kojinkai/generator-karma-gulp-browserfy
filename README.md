@@ -15,8 +15,16 @@ npm install -g generator-karma-gulp-browserify
 Then generate your new project:
 
 ```bash
-yo karma-gulp-browserify-update
+yo karma-gulp-browserify
 ```
+
+## Starting the test runner
+```bash
+npm run dev
+```
+
+This will run eslint and watch the Javascript in `app`, browserifying the code when changes are detected.
+
 
 ## Getting To Know Yeoman
 
@@ -27,7 +35,7 @@ yo karma-gulp-browserify-update
 
 ## License
 
-Apache-2.0 © [Lewis Nixon](http://boxdelue.io)
+Apache-2.0 © [Lewis Nixon](http://boxdeluxe.io)
 
 
 [npm-image]: https://badge.fury.io/js/generator-karma-gulp-browserify.svg

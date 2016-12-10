@@ -23,6 +23,11 @@ module.exports = generators.Base.extend({
         name: 'description',
         message: 'Describe your project',
         default: 'my karma-gulp-browserify harness'
+      },
+      {
+        type: 'input',
+        name: 'Author',
+        message: 'Your Name'
       }
     ];
 
@@ -72,17 +77,21 @@ module.exports = generators.Base.extend({
       );
     },
 
-    eslint() {
-      this.fs.copy(
-        this.templatePath('eslintrc'),
-        this.destinationPath('.eslintrc')
-      );
-    },
-
     babel() {
       this.fs.copy(
         this.templatePath('babelrc'),
         this.destinationPath('.babelrc')
+      );
+    },
+
+    readme() {
+      this.fs.copyTpl(
+        this.templatePath('README.md'),
+        this.destinationPath('README.md'), {
+          author: this.props.author,
+          name: this.props.name,
+          description: this.props.description
+        }
       );
     }
   },
