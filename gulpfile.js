@@ -11,7 +11,7 @@ const coveralls = require('gulp-coveralls');
 
 gulp.task('static', () => {
   // @todo figure out why travis can't find eslint config
-  if (!process.env.CI) {
+  if (process.env.CI) {
     return;
   }  
   return gulp.src('**/*.js')
