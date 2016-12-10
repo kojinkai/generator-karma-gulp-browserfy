@@ -25,7 +25,6 @@ describe('generator-karma-gulp-browserify-update:app', () => {
       'gulp/util/bundleLogger.js',
       'gulp/util/handleErrors.js',
       'gulp/util/scriptFilter.js',
-      'gulp/tasks/browserify.js',
       'gulp/tasks/development.js',
       'gulp/tasks/eslint.js',
       'gulp/tasks/unit.js',
