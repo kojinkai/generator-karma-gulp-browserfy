@@ -26,8 +26,8 @@
     "yosay": "^1.0.0"
   },
   "devDependencies": {
-    "eslint": "^3.1.1",
-    "eslint-config-xo-space": "^0.15.0",
+    "eslint": "3.11.1",
+    "eslint-config-xo-space": "0.15.0",
     "gulp": "^3.9.0",
     "gulp-babel-istanbul": "^1.5.0",
     "gulp-coveralls": "^0.1.0",
@@ -39,6 +39,14 @@
     "gulp-plumber": "^1.0.0",
     "yeoman-assert": "^2.0.0",
     "yeoman-test": "^1.0.0"
+  },
+  "eslintConfig": {
+    "extends": "xo-space/esnext",
+    "env": {
+      "es6": true,
+      "mocha": true,
+      "jasmine": true
+    }
   },
   "repository": "kojinkai/generator-karma-gulp-browserify-update",
   "scripts": {
