@@ -1,6 +1,6 @@
 {
   "name": "generator-karma-gulp-browserify",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A generator for a fast ES6 Karma test harness",
   "homepage": "https://github.com/kojinkai/generator-karma-gulp-browserify",
   "author": {
@@ -21,12 +21,11 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "yeoman-generator": "^0.24.1",
     "chalk": "^1.0.0",
+    "yeoman-generator": "^0.24.1",
     "yosay": "^1.0.0"
   },
   "devDependencies": {
-    "eslint": "3.11.1",
     "eslint-config-xo-space": "0.15.0",
     "gulp": "^3.9.0",
     "gulp-babel-istanbul": "^1.5.0",
@@ -51,7 +50,12 @@
   "repository": "kojinkai/generator-karma-gulp-browserify-update",
   "scripts": {
     "prepublish": "gulp prepublish",
-    "test": "gulp"
+    "test": "gulp",
+    "lint": "gulp static"
   },
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=6.91",
+    "npm": "3.10.8"
+  }
 }
