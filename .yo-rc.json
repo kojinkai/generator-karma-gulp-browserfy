@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Lewis Nixon",
+      "authorEmail": "lewcfn@gmail.com",
+      "authorUrl": ""
+    }
+  }
+}

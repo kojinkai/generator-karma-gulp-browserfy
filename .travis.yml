@@ -1,7 +1,9 @@
 language: node_js
 node_js:
-- v6.9.1
-- v5
+  - 7
+  - 6
+  - 4
+after_script: 'cat ./coverage/lcov.info | coveralls'
 deploy:
   provider: npm
   email: lewcfn@gmail.com

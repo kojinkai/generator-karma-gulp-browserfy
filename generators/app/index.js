@@ -1,14 +1,13 @@
 'use strict';
-const generators = require('yeoman-generator');
+const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
 
-module.exports = generators.Base.extend({
-
+module.exports = class extends Generator {
   prompting() {
-    // Have generators greet the user.
+    // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the classy ' + chalk.red('generator-karma-gulp-browserify') + ' generator!'
+      'Welcome to the fine-assed ' + chalk.red('generator-karma-gulp-browserify') + ' generator!'
     ));
 
     const prompts = [
@@ -26,6 +25,12 @@ module.exports = generators.Base.extend({
       },
       {
         type: 'input',
+        name: 'version',
+        message: 'Version',
+        default: '0.0.0'
+      },
+      {
+        type: 'input',
         name: 'Author',
         message: 'Your Name'
       }
@@ -35,68 +40,72 @@ module.exports = generators.Base.extend({
       // To access props later use this.props.someAnswer;
       this.props = props;
     });
-  },
+  }
 
-  writing: {
+  writing() {
+    this.fs.copyTpl(
+      this.templatePath('_package.json'),
+      this.destinationPath('package.json'), {
+        name: this.props.name,
+        description: this.props.description,
+        version: this.props.version,
+        author: this.props.author
+      }
+    );
 
-    packageJSON() {
-      this.fs.copyTpl(
-        this.templatePath('_package.json'),
-        this.destinationPath('package.json'), {
-          name: this.props.name,
-          description: this.props.description
-        }
-      );
-    },
+    this.fs.copy(
+      this.templatePath('app'),
+      this.destinationPath('app')
+    );
 
-    app() {
-      this.fs.copy(
-        this.templatePath('app'),
-        this.destinationPath('app')
-      );
-    },
+    this.fs.copy(
+      this.templatePath('gulpfile.js'),
+      this.destinationPath('gulpfile.js')
+    );
 
-    gulpfile() {
-      this.fs.copy(
-        this.templatePath('gulpfile.js'),
-        this.destinationPath('gulpfile.js')
-      );
-    },
+    this.fs.copy(
+      this.templatePath('gulp'),
+      this.destinationPath('gulp')
+    );
 
-    tasks() {
-      this.fs.copy(
-        this.templatePath('gulp'),
-        this.destinationPath('gulp')
-      );
-    },
+    this.fs.copy(
+      this.templatePath('test'),
+      this.destinationPath('test')
+    );
 
-    test() {
-      this.fs.copy(
-        this.templatePath('test'),
-        this.destinationPath('test')
-      );
-    },
+    this.fs.copy(
+      this.templatePath('nvmrc'),
+      this.destinationPath('.nvmrc')
+    );
 
-    babel() {
-      this.fs.copy(
-        this.templatePath('babelrc'),
-        this.destinationPath('.babelrc')
-      );
-    },
+    this.fs.copy(
+      this.templatePath('editorconfig'),
+      this.destinationPath('.editorconfig')
+    );
 
-    readme() {
-      this.fs.copyTpl(
-        this.templatePath('README.md'),
-        this.destinationPath('README.md'), {
-          author: this.props.author,
-          name: this.props.name,
-          description: this.props.description
-        }
-      );
-    }
-  },
+    this.fs.copy(
+      this.templatePath('gitignore'),
+      this.destinationPath('.gitignore')
+    );
+
+    this.fs.copy(
+      this.templatePath('gitattributes'),
+      this.destinationPath('.gitattributes')
+    );
+
+    this.fs.copyTpl(
+      this.templatePath('README.md'),
+      this.destinationPath('README.md'), {
+        author: this.props.author,
+        name: this.props.name,
+        description: this.props.description
+      }
+    );
+  }
 
   install() {
-    this.npmInstall();
+    this.installDependencies({
+      bower: false
+    });
   }
-});
+};

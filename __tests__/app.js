@@ -3,11 +3,16 @@ const path = require('path');
 const assert = require('yeoman-assert');
 const helpers = require('yeoman-test');
 
-describe('generator-karma-gulp-browserify-update:app', () => {
-  before(() => {
+describe('generator-karma-gulp-browserify:app', () => {
+  beforeAll(() => {
     return helpers.run(path.join(__dirname, '../generators/app'))
-      .withPrompts({someAnswer: true})
-      .toPromise();
+      .withPrompts({someAnswer: true});
+  });
+
+  it('creates the package.json', () => {
+    assert.file([
+      'package.json'
+    ]);
   });
 
   it('creates the app files', () => {
@@ -44,9 +49,24 @@ describe('generator-karma-gulp-browserify-update:app', () => {
     ]);
   });
 
-  it('creates the .babelrc', () => {
+  it('creates the .nvmrc', () => {
     assert.file([
-      '.babelrc'
+      '.nvmrc'
+    ]);
+  });
+
+  it('creates the .editorconfig', () => {
+    assert.file([
+      '.editorconfig'
+    ]);
+  });
+
+  it('creates the .gitignore && .gitattributes', () => {
+    assert.file([
+      '.gitignore'
+    ]);
+    assert.file([
+      '.gitattributes'
     ]);
   });
 });
