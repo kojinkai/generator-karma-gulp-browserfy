@@ -25,7 +25,7 @@ yo karma-gulp-browserify
 
 ## License
 
-MIT © [Lewis Nixon]()
+MIT © [Lewis Nixon](http://boxdeluxe.io)
 
 
 [npm-image]: https://badge.fury.io/js/generator-karma-gulp-browserify.svg
