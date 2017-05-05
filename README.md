@@ -1,5 +1,6 @@
-# generator-karma-gulp-browserify [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-> A generator for a fast ES6 Karma test harness
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# generator-karma-gulp-browserify 
+A generator for a fast ES6 Karma test harness
 
 ## Installation
 
