@@ -49,9 +49,24 @@ describe('generator-karma-gulp-browserify:app', () => {
     ]);
   });
 
-  it('creates the .babelrc', () => {
+  it('creates the .nvmrc', () => {
     assert.file([
-      '.babelrc'
+      '.nvmrc'
+    ]);
+  });
+
+  it('creates the .editorconfig', () => {
+    assert.file([
+      '.editorconfig'
+    ]);
+  });
+
+  it('creates the .gitignore && .gitattributes', () => {
+    assert.file([
+      '.gitignore'
+    ]);
+    assert.file([
+      '.gitattributes'
     ]);
   });
 });

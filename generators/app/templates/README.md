@@ -17,4 +17,4 @@ npm test
 This will run the [Jasmine](https://jasmine.github.io/) tests with Phantom JS
 
 ## License
-Apache-2.0 © <%- author %>
+MIT © <%- author %>

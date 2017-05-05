@@ -25,6 +25,12 @@ module.exports = class extends Generator {
       },
       {
         type: 'input',
+        name: 'version',
+        message: 'Version',
+        default: '0.0.0'
+      },
+      {
+        type: 'input',
         name: 'Author',
         message: 'Your Name'
       }
@@ -41,7 +47,9 @@ module.exports = class extends Generator {
       this.templatePath('_package.json'),
       this.destinationPath('package.json'), {
         name: this.props.name,
-        description: this.props.description
+        description: this.props.description,
+        version: this.props.version,
+        author: this.props.author
       }
     );
 
@@ -66,8 +74,23 @@ module.exports = class extends Generator {
     );
 
     this.fs.copy(
-      this.templatePath('babelrc'),
-      this.destinationPath('.babelrc')
+      this.templatePath('nvmrc'),
+      this.destinationPath('.nvmrc')
+    );
+
+    this.fs.copy(
+      this.templatePath('editorconfig'),
+      this.destinationPath('.editorconfig')
+    );
+
+    this.fs.copy(
+      this.templatePath('gitignore'),
+      this.destinationPath('.gitignore')
+    );
+
+    this.fs.copy(
+      this.templatePath('gitattributes'),
+      this.destinationPath('.gitattributes')
     );
 
     this.fs.copyTpl(
