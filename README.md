@@ -1,6 +1,4 @@
-# generator-karma-gulp-browserify
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-
+# generator-karma-gulp-browserify [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 > A generator for a fast ES6 Karma test harness
 
 ## Installation
@@ -18,14 +16,6 @@ Then generate your new project:
 yo karma-gulp-browserify
 ```
 
-## Starting the test runner
-```bash
-npm run dev
-```
-
-This will run eslint and watch the Javascript in `app`, browserifying the code when changes are detected.
-
-
 ## Getting To Know Yeoman
 
  * Yeoman has a heart of gold.
@@ -35,7 +25,7 @@ This will run eslint and watch the Javascript in `app`, browserifying the code w
 
 ## License
 
-Apache-2.0 © [Lewis Nixon](http://boxdeluxe.io)
+MIT © [Lewis Nixon]()
 
 
 [npm-image]: https://badge.fury.io/js/generator-karma-gulp-browserify.svg

@@ -1,13 +1,18 @@
 'use strict';
-const path = require('path');
-const assert = require('yeoman-assert');
-const helpers = require('yeoman-test');
+var path = require('path');
+var assert = require('yeoman-assert');
+var helpers = require('yeoman-test');
 
-describe('generator-karma-gulp-browserify-update:app', () => {
-  before(() => {
+describe('generator-karma-gulp-browserify:app', () => {
+  beforeAll(() => {
     return helpers.run(path.join(__dirname, '../generators/app'))
-      .withPrompts({someAnswer: true})
-      .toPromise();
+      .withPrompts({someAnswer: true});
+  });
+
+  it('creates the package.json', () => {
+    assert.file([
+      'package.json'
+    ]);
   });
 
   it('creates the app files', () => {
