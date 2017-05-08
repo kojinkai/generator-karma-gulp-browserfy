@@ -1,6 +1,6 @@
 {
   "name": "generator-karma-gulp-browserify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A generator for a fast ES6 Karma test harness",
   "homepage": "https://github.com/kojinkai/generator-karma-gulp-browserify",
   "author": {
