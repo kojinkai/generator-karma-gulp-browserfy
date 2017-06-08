@@ -23,7 +23,12 @@ To get started with development simply run
 ```bash
 npm run dev
 ```
-this will begin watching the project files and run eslint on when changes are detected to the test files
+this will begin watching the project files and run eslint on when changes are detected to the test files.
+
+To run the tests run
+```bash
+npm test
+```
 
 ## Getting To Know Yeoman
 
