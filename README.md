@@ -2,6 +2,8 @@
 # generator-karma-gulp-browserify 
 A generator for a fast ES6 Karma test harness
 
+View this package on [npmjs.com](https://www.npmjs.com/package/generator-karma-gulp-browserify)
+
 ## Installation
 
 First, install [Yeoman](http://yeoman.io) and generator-karma-gulp-browserify using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
@@ -16,6 +18,12 @@ Then generate your new project:
 ```bash
 yo karma-gulp-browserify
 ```
+This will install the project and the npm packages required.
+To get started with development simply run
+```bash
+npm run dev
+```
+this will begin watching the project files and run eslint on when changes are detected to the test files
 
 ## Getting To Know Yeoman
 
