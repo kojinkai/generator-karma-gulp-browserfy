@@ -39,7 +39,7 @@ npm test
 
 ## License
 
-MIT © [Lewis Nixon](http://boxdeluxe.io)
+MIT © [Lewis Nixon](https://boxdeluxe.io)
 
 
 [npm-image]: https://badge.fury.io/js/generator-karma-gulp-browserify.svg
