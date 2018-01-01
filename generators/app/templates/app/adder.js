@@ -1,7 +1,5 @@
 export default class {
-
-  add(arg1, arg2) {
-    return arg1 + arg2;
+  add(...args) {
+    return args.reduce((acc, curr) => acc + curr)
   }
-
 }
