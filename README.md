@@ -1,5 +1,7 @@
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 # generator-karma-gulp-browserify 
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/kojinkai/generator-karma-gulp-browserify.svg)](https://greenkeeper.io/)
 A generator for a fast ES6 Karma test harness
 
 View this package on [npmjs.com](https://www.npmjs.com/package/generator-karma-gulp-browserify)
